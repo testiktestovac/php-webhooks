@@ -17,7 +17,7 @@ class webhook
     function set_embed($title, $description, $color)
     {
         array_push($this->data["embeds"], ["title" => $title, "description" => $description, "color" => $color]);
-        $this->data["embeds"][0]["fields"] = array();
+        $this->data["embeds"][count($this->data["embeds"])-1]["fields"] = array();
     }
 
     function embed_field($embed, $name, $value)

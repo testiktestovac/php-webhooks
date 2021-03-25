@@ -1,9 +1,9 @@
-##PHP discord webhooks
+# PHP discord webhooks
 
 Simple class to send spicy discord webhooks
 
 
-##Documentation
+# Documentation
 
 Start by importing\
 `include "webhooks.php"`

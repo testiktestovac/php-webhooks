@@ -18,11 +18,18 @@ class webhook
     {
         array_push($this->data["embeds"], ["title" => $title, "description" => $description, "color" => $color]);
         $this->data["embeds"][count($this->data["embeds"])-1]["fields"] = array();
+        return count($this->data["embeds"]) - 1;
     }
 
     function embed_field($embed, $name, $value)
     {
         array_push($this->data["embeds"][$embed]["fields"], ["name" => $name, "value" => $value]);
+    }
+    
+    function clear()
+    {
+        $this->data = array();
+        $this->data["embeds"] = array();
     }
 
     function send()
